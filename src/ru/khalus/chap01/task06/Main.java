@@ -18,7 +18,7 @@ public class Main {
         int b = Integer.parseInt(bS);
 
         int x = a;
-        
+
         for (int i = 1; i < b; i++) {
             a = a*x;
         }
