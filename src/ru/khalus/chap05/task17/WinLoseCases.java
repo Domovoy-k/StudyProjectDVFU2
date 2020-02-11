@@ -2,6 +2,8 @@ package ru.khalus.chap05.task17;
 
 public class WinLoseCases {
 
+    //возможные комбинации для добавления кредитов, выигрыша или поражения
+
     public static int firstCase (int[] slot) {
         if ((slot[0] == slot [1] && slot [1] == slot [2]) && (slot[0] != 5 && slot[0] != 7 && slot[0] != 6)) {
             return 5000;

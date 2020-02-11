@@ -10,6 +10,7 @@ public class Main {
 
         System.out.println("Добро пожаловать в Игру!\n");
 
+        //вызов правил игры
         Rules.rulesMain();
 
         System.out.print("\nВведите имя Игрока: ");
@@ -17,10 +18,12 @@ public class Main {
 
         while (gamer.getCredit() > 0 && EndGame.getEnd()) {
 
+            //отработка кнопок игрового пульта
             Menu.click(gamer);
 
             }
 
+        //завершение игры
         EndGame.endgame();
 
     }

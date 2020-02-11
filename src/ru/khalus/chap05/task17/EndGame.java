@@ -2,6 +2,8 @@ package ru.khalus.chap05.task17;
 
 public class EndGame {
 
+    //завершение игры
+
     private static boolean end = true;
 
     public static boolean endgame() {
