@@ -12,47 +12,14 @@ public class Main {
         String name = Reader.readLine();
         Gamer gamer = new Gamer("name");
 
+        while (gamer.getCredit() > 0 && EndGame.getEnd()) {
 
-        while (gamer.getCredit() > 0) {
+            Menu.click(gamer);
 
-            int[] slot = new int[3];
-            slot[0] = (int) (Math.random() * 8);
-            slot[1] = (int) (Math.random() * 8);
-            slot[2] = (int) (Math.random() * 8);
-
-            for (int value : slot) {
-                System.out.print(value + " ");
             }
+        
+        EndGame.endgame();
 
-            gamer.setCredit(gamer.getCredit() + firstCase(slot));
-            System.out.println();
-            gamer.setCredit(gamer.getCredit() - 1000);
-        }
-
-    }
-
-    public static int firstCase (int[] slot) {
-        if (slot[0] == slot [1] && slot [1] == slot [2]) {
-            int y = 1000;
-            return y;
-        }
-        return 0;
-    }
-
-    public static int secondCase (int[] slot) {
-        if (slot[0] == 5){
-            int y = 1000;
-            return y;
-        }
-        return 0;
-    }
-
-    public static int thirdCase (int[] slot) {
-        if (slot[0] == 7){
-            int y = 1000;
-            return y;
-        }
-        return 0;
     }
 
 }

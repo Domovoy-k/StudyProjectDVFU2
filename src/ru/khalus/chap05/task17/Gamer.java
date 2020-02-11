@@ -4,7 +4,8 @@ public class Gamer {
     private String name;
     private int credit = 5000;
 
-    public Gamer (String name) {
+    public Gamer() {}
+    public Gamer(String name) {
         this.name = name;
     }
 
