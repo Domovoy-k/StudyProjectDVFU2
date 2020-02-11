@@ -8,12 +8,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Добро пожаловать в Игру!");
+        System.out.println("Добро пожаловать в Игру!\n");
 
+        Rules.rulesMain();
 
-        System.out.print("Введите имя Игрока: ");
-        String name = Reader.readLine();
-        Gamer gamer = new Gamer("name");
+        System.out.print("\nВведите имя Игрока: ");
+        Gamer gamer = new Gamer(Reader.readLine());
 
         while (gamer.getCredit() > 0 && EndGame.getEnd()) {
 

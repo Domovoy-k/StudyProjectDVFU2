@@ -9,9 +9,10 @@ public class Menu {
     public static void click(Gamer gamer) throws IOException {
         BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Ваш кредит составляет: " + gamer.getCredit());
+        System.out.println(gamer.getName() + ", Ваш кредит составляет: " + gamer.getCredit());
         System.out.println("Для продолжения игры нажмите \"z\"");
         System.out.println("Для выхода из игры нажмите \"x\"");
+        System.out.println("Для просмотра правил нажмите \"r\"");
         String button = Reader.readLine();
 
         if (button.equals("z")) {
@@ -20,8 +21,12 @@ public class Menu {
             if (button.equals("x")) {
                 EndGame.setEnd(false);
             } else {
-                System.out.println("Я не понимаю Вашей команды :(");
-                System.out.println();
+                if (button.equals("r")) {
+                    Rules.rules();
+                } else {
+                    System.out.println("Я не понимаю Вашей команды :(");
+                    System.out.println();
+                }
             }
         }
 

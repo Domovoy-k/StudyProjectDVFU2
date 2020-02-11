@@ -1,33 +1,17 @@
 package ru.khalus.chap05.task17;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Game {
 
-    public static void game(Gamer gamer, String x) throws IOException {
+    public static void game(Gamer gamer, String x) {
 
         gamer.setCredit(gamer.getCredit() - 1000);
 
         int[] slot = new int[3];
 
-
-        BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
-        String aS = Reader.readLine();
-        slot[0] = Integer.parseInt(aS);
-        String bS = Reader.readLine();
-        slot[1] = Integer.parseInt(bS);
-        String cS = Reader.readLine();
-        slot[2] = Integer.parseInt(cS);
-
-
-
-        /*
         slot[0] = (int) (Math.random() * 8);
         slot[1] = (int) (Math.random() * 8);
         slot[2] = (int) (Math.random() * 8);
-        */
 
         for (int value : slot) {
             System.out.print(value + " ");
@@ -39,11 +23,13 @@ public class Game {
         gamer.setCredit(gamer.getCredit() + WinLoseCases.fourthCase(slot));
 
         if (WinLoseCases.fifthCase(slot) == 1) {
+            gamer.setCredit(gamer.getCredit() + 1000000);
             System.out.println("ВЫ ЕДИНСТВЕННЫЙ И НЕПОВТОРИМЫЙ ПОБЕДИТЕЛЬ!");
             EndGame.setEnd(false);
         }
 
         if (WinLoseCases.sixthCase(slot) == 1) {
+            gamer.setCredit(0);
             System.out.println("ВЫ ЕДИНСТВЕННЫЙ И НЕПОВТОРИМЫЙ ЛУЗЕР!");
             EndGame.setEnd(false);
         }
