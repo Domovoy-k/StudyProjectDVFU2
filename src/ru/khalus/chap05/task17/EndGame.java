@@ -6,9 +6,8 @@ public class EndGame {
 
     private static boolean end = true;
 
-    public static boolean endgame() {
+    public static void endgame() {
         System.out.println("Спасибо за игру, до свидания!");
-        return false;
     }
 
     public static boolean getEnd() {
