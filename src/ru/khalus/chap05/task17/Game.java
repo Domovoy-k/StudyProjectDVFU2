@@ -12,7 +12,7 @@ public class Game {
 
         int[] slot = new int[3];
 
-        /*
+
         BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
         String aS = Reader.readLine();
         slot[0] = Integer.parseInt(aS);
@@ -20,11 +20,14 @@ public class Game {
         slot[1] = Integer.parseInt(bS);
         String cS = Reader.readLine();
         slot[2] = Integer.parseInt(cS);
-        */
 
+
+
+        /*
         slot[0] = (int) (Math.random() * 8);
         slot[1] = (int) (Math.random() * 8);
         slot[2] = (int) (Math.random() * 8);
+        */
 
         for (int value : slot) {
             System.out.print(value + " ");
@@ -33,5 +36,16 @@ public class Game {
         gamer.setCredit(gamer.getCredit() + WinLoseCases.firstCase(slot));
         gamer.setCredit(gamer.getCredit() + WinLoseCases.secondCase(slot));
         gamer.setCredit(gamer.getCredit() + WinLoseCases.thirdCase(slot));
+        gamer.setCredit(gamer.getCredit() + WinLoseCases.fourthCase(slot));
+
+        if (WinLoseCases.fifthCase(slot) == 1) {
+            System.out.println("ВЫ ЕДИНСТВЕННЫЙ И НЕПОВТОРИМЫЙ ПОБЕДИТЕЛЬ!");
+            EndGame.setEnd(false);
+        }
+
+        if (WinLoseCases.sixthCase(slot) == 1) {
+            System.out.println("ВЫ ЕДИНСТВЕННЫЙ И НЕПОВТОРИМЫЙ ЛУЗЕР!");
+            EndGame.setEnd(false);
+        }
     }
 }

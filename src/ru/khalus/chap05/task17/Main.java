@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println("Добро пожаловать в Игру!");
+
+
         System.out.print("Введите имя Игрока: ");
         String name = Reader.readLine();
         Gamer gamer = new Gamer("name");
@@ -17,7 +20,7 @@ public class Main {
             Menu.click(gamer);
 
             }
-        
+
         EndGame.endgame();
 
     }

@@ -18,7 +18,7 @@ public class Menu {
             Game.game(gamer, button);
             } else {
             if (button.equals("x")) {
-                EndGame.setEnd(EndGame.endgame());
+                EndGame.setEnd(false);
             } else {
                 System.out.println("Я не понимаю Вашей команды :(");
                 System.out.println();
